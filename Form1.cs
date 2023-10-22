@@ -1,24 +1,19 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace PasswordGenerator {
-
-
-	public partial class Form1 : Form {
-		
+namespace PasswordGenerator
+{
+	public partial class Form1 : Form
+	{		
 		private static Random random = new Random();
 		
-		public Form1() {
+		public Form1()
+		{
 			InitializeComponent();
 		}
 		
-		private void GeneratePassword_Click(object sender, EventArgs e) {
-			UpdatePassword();
-		}
-
-
-		private void UpdatePassword() {
-			
+		private void GeneratePassword_Click(object sender, EventArgs e)
+		{
 			// characters the password can contain
 			string validPasswordCharacters = "";
 
@@ -37,10 +32,14 @@ namespace PasswordGenerator {
 			for (int i = 0; i < length; i++)
 				passwordOut += validPasswordCharacters[random.Next(0, validPasswordCharacters.Length - 1)];
 
-			// output and copy password
+			// output password
 			PasswordOut.Text = passwordOut;
-			Clipboard.SetText(passwordOut);
 		}
 
+		private void button1_Click(object sender, EventArgs e)
+		{			
+			// copy password
+			Clipboard.SetText(PasswordOut.Text);
+		}
 	}
 }

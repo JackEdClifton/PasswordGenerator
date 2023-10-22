@@ -33,6 +33,7 @@ namespace PasswordGenerator {
 			this.GeneratePassword = new System.Windows.Forms.Button();
 			this.PasswordOut = new System.Windows.Forms.Label();
 			this.PasswordLength = new System.Windows.Forms.NumericUpDown();
+			this.CopyPassword = new System.Windows.Forms.Button();
 			label1 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.PasswordLength)).BeginInit();
 			this.SuspendLayout();
@@ -104,18 +105,18 @@ namespace PasswordGenerator {
 			// 
 			// GeneratePassword
 			// 
-			this.GeneratePassword.Location = new System.Drawing.Point(280, 120);
+			this.GeneratePassword.Location = new System.Drawing.Point(280, 103);
 			this.GeneratePassword.Name = "GeneratePassword";
 			this.GeneratePassword.Size = new System.Drawing.Size(206, 38);
 			this.GeneratePassword.TabIndex = 4;
-			this.GeneratePassword.Text = "Generate && Copy Password";
+			this.GeneratePassword.Text = "Generate Password";
 			this.GeneratePassword.UseVisualStyleBackColor = true;
 			this.GeneratePassword.Click += new System.EventHandler(this.GeneratePassword_Click);
 			// 
 			// PasswordOut
 			// 
 			this.PasswordOut.AutoSize = true;
-			this.PasswordOut.Location = new System.Drawing.Point(44, 212);
+			this.PasswordOut.Location = new System.Drawing.Point(41, 243);
 			this.PasswordOut.MaximumSize = new System.Drawing.Size(500, 0);
 			this.PasswordOut.MinimumSize = new System.Drawing.Size(500, 50);
 			this.PasswordOut.Name = "PasswordOut";
@@ -146,11 +147,22 @@ namespace PasswordGenerator {
             0,
             0});
 			// 
+			// CopyPassword
+			// 
+			this.CopyPassword.Location = new System.Drawing.Point(280, 147);
+			this.CopyPassword.Name = "CopyPassword";
+			this.CopyPassword.Size = new System.Drawing.Size(206, 38);
+			this.CopyPassword.TabIndex = 8;
+			this.CopyPassword.Text = "Copy Password";
+			this.CopyPassword.UseVisualStyleBackColor = true;
+			this.CopyPassword.Click += new System.EventHandler(this.button1_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(622, 377);
+			this.Controls.Add(this.CopyPassword);
 			this.Controls.Add(label1);
 			this.Controls.Add(this.PasswordLength);
 			this.Controls.Add(this.PasswordOut);
@@ -179,6 +191,7 @@ namespace PasswordGenerator {
 		private System.Windows.Forms.Button GeneratePassword;
 		private System.Windows.Forms.Label PasswordOut;
 		private System.Windows.Forms.NumericUpDown PasswordLength;
+		private System.Windows.Forms.Button CopyPassword;
 	}
 }
 
